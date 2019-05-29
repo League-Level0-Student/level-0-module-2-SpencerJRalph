@@ -12,12 +12,30 @@ public class Validation {
 		
 		Random randomMaker = new Random();
 		
-		int randomNumber = randomMaker.nextInt(5);
+		int randomNumber = randomMaker.nextInt(5) +1;
 		
 		System.out.println(randomNumber);
 
 		// 1. Use each value of randomNumber to give the user a random compliment.
-
+		for (int i = 0; i < 10; i++) {
+			
+		
+		if (randomNumber ==1) {
+			JOptionPane.showMessageDialog(null, "U R KOOL");
+		}
+		else if (randomNumber ==2) {
+			JOptionPane.showMessageDialog(null, "UR APPLESAUSE");
+		}
+		else if (randomNumber ==3) {
+			JOptionPane.showMessageDialog(null, "hola tu es bonita");
+		}
+		else if (randomNumber ==4) {
+			JOptionPane.showMessageDialog(null, "hola tu es mas fea y es un raton");
+		}
+		else if (randomNumber ==5) { 
+			JOptionPane.showMessageDialog(null, "tu lleva una suddadera bonita");
+		}
+		}
 		// 2. Repeat all the code above 10 times
 		
 		// 3. Find someone to test out your program. They will like it :)
