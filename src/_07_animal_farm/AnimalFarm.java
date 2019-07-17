@@ -5,6 +5,7 @@ package _07_animal_farm;
 
 import java.applet.AudioClip;
 
+
 //Copyright (c) The League of Amazing Programmers 2013-2017
 
 //Level 0
@@ -19,22 +20,54 @@ public class AnimalFarm {
 		/*
 		 * 1. Ask the user which animal they want, then play the sound of that animal.
 		 */
-		
+		for( ; ; )
+		{	
+		String animal = JOptionPane.showInputDialog(null, "What animal do you want?");
+		 if (animal.equalsIgnoreCase("cow")) {
+			 playMoo();
+		 }
+		 
 		/* 2. Make it so that the user can keep entering new animals. */
+	
+		 else if (animal.equalsIgnoreCase("duck")) {
+		playQuack();
+		 }
+	
+		 else if (animal.equalsIgnoreCase("dog")) {
+			 playWoof();
+		 }
+		 else if (animal.equalsIgnoreCase("cat")) {
+			 playMeow();
+		 }else if (animal.equalsIgnoreCase("llama")) {
+			 playLlama();
+		 
 	}
-
-	void playMoo() {
-		playNoise(mooFile);
+		 else break;
+		}
 	}
+		 
+		 
+		 
+		 void playMoo() {
+			 playNoise(mooFile);
+		 }
 
-	void playQuack() {
-		playNoise(quackFile);
-	}
+		 void playQuack() {
+			 playNoise(quackFile);
+		 }
 
-	void playWoof() {
-		playNoise(woofFile);
-	}
+		 void playWoof() {
+			 playNoise(woofFile);
+		 }
+		 void playMeow() {
+			 playNoise(meowFile);
+		 }
+		 void playLlama() {
+			 playNoise(llamaFile);
+		 }
 
+		
+	
 	String quackFile = "quack.wav";
 	String mooFile = "moo.wav";
 	String woofFile = "woof.wav";
